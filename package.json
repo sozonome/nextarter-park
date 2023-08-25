@@ -1,0 +1,49 @@
+{
+  "name": "nextarter-base",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:turbo": "npx turbo build",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "eslint src --fix && pnpm format",
+    "lint:turbo": "npx turbo lint",
+    "type-check": "tsc --noEmit",
+    "type-check:turbo": "npx turbo type-check",
+    "format": "prettier --write src",
+    "up-interactive": "pnpm up -i",
+    "up-latest": "pnpm up-interactive -L",
+    "release": "standard-version",
+    "push-release": "git push --follow-tags origin main",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "next": "^13.4.13",
+    "next-seo": "^6.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@types/node": "^20.4.9",
+    "@types/react": "^18.2.20",
+    "eslint": "^8.46.0",
+    "eslint-config-next": "^13.4.13",
+    "eslint-config-sznm": "^2.0.2",
+    "husky": "^8.0.3",
+    "knip": "^2.19.2",
+    "lint-staged": "^13.2.3",
+    "next-sitemap": "^4.2.2",
+    "prettier": "^3.0.1",
+    "standard-version": "^9.5.0",
+    "typescript": "5.1.6"
+  },
+  "engines": {
+    "node": ">=16.8.x",
+    "pnpm": ">=8"
+  },
+  "packageManager": "pnpm@8.1.0"
+}
