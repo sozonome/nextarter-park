@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 
 import '~/lib/styles/globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const body = Outfit({ subsets: ['latin'], variable: '--font-body' });
 
 const APP_NAME = 'nextarter-base';
 
@@ -33,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={body.variable}>{children}</body>
     </html>
   );
 }

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -19,7 +19,8 @@
     "jsx": "preserve",
     "baseUrl": "src",
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./*"],
+      "styled-system/*": ["../styled-system/*"] 
     },
     "incremental": true,
     "plugins": [
@@ -33,6 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
+    "styled-system"
   ],
   "exclude": [
     "node_modules"
