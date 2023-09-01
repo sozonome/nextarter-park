@@ -1,5 +1,5 @@
 {
-  "name": "nextarter-base",
+  "name": "nextarter-park",
   "private": true,
   "scripts": {
     "dev": "rm -rf .next && next dev",

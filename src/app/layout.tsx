@@ -7,7 +7,7 @@ import '~/lib/styles/globals.css';
 
 const body = Outfit({ subsets: ['latin'], variable: '--font-body' });
 
-const APP_NAME = 'nextarter-base';
+const APP_NAME = 'nextarter-park';
 
 export const metadata: Metadata = {
   title: APP_NAME,
