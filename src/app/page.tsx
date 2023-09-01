@@ -1,9 +1,3 @@
-import { Button } from '~/lib/components/ui/button';
+import HomePage from '~/lib/pages/home';
 
-export default function Home() {
-  return (
-    <main>
-      <Button>Hi!</Button>
-    </main>
-  );
-}
+export default HomePage;

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 
+import Layout from '~/lib/layout';
+
 import '~/lib/styles/globals.css';
 
 const body = Outfit({ subsets: ['latin'], variable: '--font-body' });
@@ -33,7 +35,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={body.variable}>{children}</body>
+      <body className={body.variable}>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }
