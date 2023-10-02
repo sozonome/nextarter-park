@@ -17,7 +17,7 @@ export function ThemeToggle() {
       toggle={toggle}
       toggled={theme === 'light'}
       className={cx(
-        button({ variant: 'tertiary', size: 'sm' }),
+        button({ variant: 'ghost', size: 'sm' }),
         css({
           fontSize: 'xl',
           px: '0',
