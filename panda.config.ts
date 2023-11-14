@@ -5,7 +5,7 @@ const baseColor = '{colors.teal.500}';
 
 export default defineConfig({
   preflight: true,
-  presets: ['@pandacss/dev/presets', '@park-ui/presets'],
+  presets: ['@pandacss/dev/presets', '@park-ui/panda-preset'],
   include: ['./src/**/*.{js,jsx,ts,tsx}'],
   exclude: [],
   jsxFramework: 'react',
