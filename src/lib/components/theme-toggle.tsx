@@ -23,6 +23,7 @@ export function ThemeToggle() {
           px: '0',
         })
       )}
+      placeholder=""
     />
   );
 }
