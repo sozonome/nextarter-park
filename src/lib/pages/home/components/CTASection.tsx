@@ -31,21 +31,7 @@ const CTASection = () => {
         </a>
       </div>
       <div className={css({ display: 'flex', alignItems: 'center', gap: 2 })}>
-        <Button
-          className={css({
-            bgGradient: 'to-br',
-            gradientFrom: 'gray.100',
-            gradientTo: 'green.200',
-            fontWeight: 'semibold',
-            color: 'green.700',
-            _hover: {
-              gradientFrom: 'gray.200',
-              gradientTo: 'green.200',
-              color: 'green.800',
-            },
-          })}
-          asChild
-        >
+        <Button asChild>
           <a
             href={`https://github.com/${repoName}/generate`}
             target="_blank"
@@ -55,15 +41,7 @@ const CTASection = () => {
           </a>
         </Button>
 
-        <Button
-          className={css({
-            rounded: '3xl',
-            padding: 2,
-            fontSize: 'xs',
-            fontWeight: 'semibold',
-          })}
-          asChild
-        >
+        <Button asChild variant="link" color="teal">
           <a
             href={`https://github.com/${repoName}`}
             target="_blank"
