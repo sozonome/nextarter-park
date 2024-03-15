@@ -24,6 +24,8 @@ export function ThemeToggle() {
         })
       )}
       placeholder=""
+      onPointerEnterCapture={() => {}}
+      onPointerLeaveCapture={() => {}}
     />
   );
 }
