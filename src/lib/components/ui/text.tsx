@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
 
 import {
-  styled,
   type HTMLStyledProps,
   type StyledComponent,
+  styled,
 } from 'styled-system/jsx';
-import { text, type TextVariantProps } from 'styled-system/recipes';
+import { type TextVariantProps, text } from 'styled-system/recipes';
 
 type As =
   | 'p'

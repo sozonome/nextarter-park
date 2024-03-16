@@ -10,7 +10,7 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
   (props, ref) => {
     const { as = 'h2', ...textProps } = props;
     return <Text ref={ref} as={as} variant="heading" {...textProps} />;
-  }
+  },
 );
 
 Heading.displayName = 'Heading';

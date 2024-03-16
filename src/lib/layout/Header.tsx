@@ -22,7 +22,7 @@ const Header = () => {
             alignItems: 'center',
             justifyContent: 'space-between',
             py: '2!',
-          })
+          }),
         )}
       >
         <div className={css({ ml: 'auto' })}>

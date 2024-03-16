@@ -1,17 +1,17 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
+  type ComponentProps,
+  type ElementType,
+  type JSX,
   createContext,
   createElement,
   forwardRef,
   useContext,
-  type ComponentProps,
-  type ElementType,
-  type JSX,
 } from 'react';
 
 type GenericProps = Record<string, unknown>;
 type StyleRecipe = {
   (props?: GenericProps): Record<string, string>;
+  // biome-ignore lint/suspicious/noExplicitAny: flexibility
   splitVariantProps: (props: GenericProps) => any;
 };
 type StyleSlot<R extends StyleRecipe> = keyof ReturnType<R>;
@@ -21,19 +21,16 @@ type CombineProps<T, U> = Omit<T, keyof U> & U;
 
 const cx = (...args: (string | undefined)[]) => args.filter(Boolean).join(' ');
 
-export interface ComponentVariants<
-  T extends ElementType,
-  R extends StyleRecipe,
-> {
-  (props: CombineProps<ComponentProps<T>, StyleVariantProps<R>>): JSX.Element;
-}
+export type ComponentVariants<T extends ElementType, R extends StyleRecipe> = (
+  props: CombineProps<ComponentProps<T>, StyleVariantProps<R>>,
+) => JSX.Element;
 
 export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
   const StyleContext = createContext<StyleSlotRecipe<R> | null>(null);
 
   const withProvider = <T extends ElementType>(
     Component: T,
-    slot?: StyleSlot<R>
+    slot?: StyleSlot<R>,
   ): ComponentVariants<T, R> => {
     const StyledComponent = forwardRef((props: ComponentProps<T>, ref) => {
       const [variantProps, otherProps] = recipe.splitVariantProps(props);
@@ -53,7 +50,7 @@ export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
 
   const withContext = <T extends ElementType>(
     Component: T,
-    slot?: StyleSlot<R>
+    slot?: StyleSlot<R>,
   ): T => {
     if (!slot) return Component;
     const StyledComponent = forwardRef((props: ComponentProps<T>, ref) => {

@@ -1,7 +1,7 @@
 'use client';
 
-import '@theme-toggles/react/css/Around.css';
 import { Around } from '@theme-toggles/react';
+import '@theme-toggles/react/css/Around.css';
 import { useTheme } from 'next-themes';
 
 import { css, cx } from 'styled-system/css';
@@ -21,7 +21,7 @@ export function ThemeToggle() {
         css({
           fontSize: 'xl',
           px: '0',
-        })
+        }),
       )}
       placeholder=""
       onPointerEnterCapture={() => {}}

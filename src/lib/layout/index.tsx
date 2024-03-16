@@ -1,9 +1,9 @@
 import { css } from 'styled-system/css';
 import { ThemeProvider } from '~/lib/components/theme-provider';
 
-import { wrapperClassname } from './constants';
 import Footer from './Footer';
 import Header from './Header';
+import { wrapperClassname } from './constants';
 
 type LayoutProps = {
   children: React.ReactNode;
