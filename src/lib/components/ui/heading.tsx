@@ -1,15 +1,16 @@
-import { styled, type HTMLStyledProps } from 'styled-system/jsx';
-import { heading } from 'styled-system/recipes';
+import { forwardRef } from 'react';
 
-type As = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+import { Text, type TextProps } from './text';
 
-export type HeadingProps = {
-  as?: As;
-} & HTMLStyledProps<As>;
-
-export const Heading = (props: HeadingProps) => {
-  const { as = 'h2', ...localProps } = props;
-  const Dynamic = styled(as, heading);
-
-  return <Dynamic {...localProps} />;
+export type HeadingProps = Omit<TextProps, 'variant'> & {
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 };
+
+export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
+  (props, ref) => {
+    const { as = 'h2', ...textProps } = props;
+    return <Text ref={ref} as={as} variant="heading" {...textProps} />;
+  }
+);
+
+Heading.displayName = 'Heading';

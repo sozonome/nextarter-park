@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "rm -rf .next && next dev",
+    "park-ui:add-component": "pnpm dlx @park-ui/cli add",
     "build": "next build",
     "build:turbo": "pnpm dlx turbo@latest build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
