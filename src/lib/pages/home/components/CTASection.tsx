@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 import { css } from 'styled-system/css';
 import { Button } from '~/lib/components/ui/button';
 

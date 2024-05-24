@@ -4,11 +4,11 @@ import { Text } from '~/lib/components/ui/text';
 
 const SomeText = () => {
   return (
-    <div className={css({ display: 'grid', gap: 2.5 })}>
+    <div className={css({ display: 'grid', gap: 2.5, textAlign: 'center' })}>
       <Heading
         color="teal.8"
         fontWeight="bold"
-        fontSize={{ base: '2xl', md: '3xl' }}
+        fontSize={{ base: "2xl", md: "3xl" }}
       >
         nextarter-park
       </Heading>
