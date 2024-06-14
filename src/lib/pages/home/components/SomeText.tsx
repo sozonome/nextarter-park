@@ -8,7 +8,7 @@ const SomeText = () => {
       <Heading
         color="teal.8"
         fontWeight="bold"
-        fontSize={{ base: "2xl", md: "3xl" }}
+        fontSize={{ base: '2xl', md: '3xl' }}
       >
         nextarter-park
       </Heading>
